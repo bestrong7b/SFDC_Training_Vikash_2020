@@ -40,6 +40,7 @@ public class AccountTriggerHandler {
             }
             
             if(Trigger.isUpdate) {
+                // Handle scenario where Checkbox will be unchecked from checked
                 if(Acc.Create_Next_contact_Interval__c != oldMap.get(Acc.Id).Create_Next_contact_Interval__c &&
                    Acc.Create_Next_contact_Interval__c ) {
                        checkedAct.add(Acc);
